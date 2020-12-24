@@ -53,7 +53,6 @@ public class DBworker {
             for (int i = 0; i < 2; i++){
                 for (int j = 0; j <3; j++) {
                     statement.setInt(index, user.getStatistics()[i][j]);
-                    System.out.println(user.getStatistics()[i][j]);
                     index++;
                 }
             }
