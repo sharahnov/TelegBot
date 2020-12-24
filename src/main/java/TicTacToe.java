@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 public class TicTacToe implements Game{
     private long player1;
@@ -62,7 +60,7 @@ public class TicTacToe implements Game{
     private boolean checkRowCol(int row, int column){
         int check = row + column;
         if (check != 0){
-            winner = (check == 1 & !reverse) ? player1 : player2;
+            winner = (check == 1 & !reverse || check == 2 & reverse) ? player1 : player2;
             return true;
         }
         return false;
@@ -77,7 +75,7 @@ public class TicTacToe implements Game{
         }
         int check = diag1 + diag2;
         if (check != 0){
-            winner = (check == 1 & !reverse) ? player1 : player2;
+            winner = (check == 1 & !reverse || check == 2 & reverse) ? player1 : player2;
             return true;
         }
         return false;
