@@ -1,7 +1,10 @@
 import java.util.ArrayList;
 
 public interface Game {
-    void next(long player, String way);
+    boolean next(long player, String way);
     void setWay(long player, int way);
-    UserMap getMap();
+    Boolean isFinished();
+    UserMap getMessage();
+    long getOpponentId(long player);
+    long getWinner();
 }
